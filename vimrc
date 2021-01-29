@@ -125,10 +125,12 @@ Plug 'honza/vim-snippets'
 
 " 配色方案
 " colorscheme gruvbox
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 " colorscheme one
 Plug 'rakr/vim-one'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'joshdick/onedark.vim'
+
 
 " go 主要插件
 Plug 'fatih/vim-go', { 'tag': '*' }
@@ -164,7 +166,7 @@ call plug#end()
 set termguicolors
 " 配色方案, 可以从上面插件安装中的选择一个使用
 " colorscheme gruvbox " gruvbox " 主题
-colorscheme gruvbox " 主题
+colorscheme onedark " 主题
 set background=light " 主题背景 dark-深色; light-浅色
 
 
@@ -259,7 +261,7 @@ let g:tagbar_type_go = {
 "==============================================================================
 "  nerdtree-git-plugin 插件
 "==============================================================================
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
 			\ "Modified"  : "✹",
 			\ "Staged"    : "✚",
 			\ "Untracked" : "✭",
@@ -272,7 +274,7 @@ let g:NERDTreeIndicatorMapCustom = {
 			\ "Unknown"   : "?"
 			\ }
 
-let g:NERDTreeShowIgnoredStatus = 1
+let g:NERDTreeGitStatusShowIgnored = 1
 nmap <Leader>pwd :NERDTreeCWD<CR>
 
 "==============================================================================
